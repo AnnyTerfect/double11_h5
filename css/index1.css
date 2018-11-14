@@ -1,0 +1,478 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #070513;
+}
+
+.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.mask {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	opacity: 0.5;
+	z-index: 100;
+}
+
+.page {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.load {
+	display: block;
+}
+
+.load > div {
+	display: none;
+	position: absolute;
+}
+
+.ufo {
+    top: 12%;
+    left: 22%;
+    width: 56%;
+}
+
+.float {
+    top: 43%;
+    left: 42%;
+    width: 16%;
+}
+
+.platform {
+    top: 55%;
+    left: 33%;
+    width: 34%;
+}
+
+.ball {
+	display: block !important;
+    width: 30px;
+}
+
+.ball1 {
+	left: 30%;
+    top: 10%;
+}
+
+.ball2 {
+	left: 56%;
+	top: 4%;
+	transform: scale(0.5);
+}
+
+.ball3 {
+	left: 76%;
+	top: 40%;
+	transform: scale(0.3);
+}
+
+.progress {
+    top: 76%;
+    width: 44%;
+    left: calc(28% - 2px);
+    height: 50px;
+    border-radius: 25px;
+    border: 3px solid #EA5824;
+    text-align: center;
+    line-height: 50px;
+}
+
+.slide-mask {
+	position: absolute;
+    left: 3px;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+	border-radius: 25px;
+	overflow: hidden;
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	background: #EA5824;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: 500ms;
+}
+
+.start {
+	display: none;
+	color: #EA5824;
+    font-size: 150%;
+}
+
+.guide {
+	color: #EA5824;
+	white-space: nowrap;
+    text-align: center;
+}
+
+.guide-text {
+	white-space: nowrap;
+    font-size: 120%;
+    margin-top: 25px;
+    opacity: 0;
+}
+
+@keyframes tipsShake {
+	0% {
+		transform: translateX(-50%);
+	}
+	50% {
+		transform: translateX(-40%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.guide-tips {
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	transform: translateX(-50%);
+	animation-name: tipsShake;
+	animation-duration: 1000ms;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	font-size: 23px;
+}
+
+.title {
+	font-size: 120%;
+    color: #EA5824;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.bg {
+	position: absolute;
+	left: 20%;
+	right: 20%;
+	top: 30%;
+	bottom: 30%;
+	border-radius: 20px;
+	filter: blur(10px);
+	border: 3px solid #EA5824;
+	overflow: hidden;
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.point {
+	display: none;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #EA5824;
+	border: 1px solid #FFF;
+}
+
+.arrow {
+	background: url(../img/others/arrow.png);
+    position: relative;
+    left: 129%;
+    top: 0%;
+    width: 50px;
+    height: 30px;
+    background-size: 100% 100%;
+}
+
+.hint {
+	position: absolute;
+    padding: 4px;
+    color: #EA5824;
+    background: #444;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.garden .point1 {
+	left: 6%;
+	top: 39%;
+}
+
+.garden .point2 {
+	left: 81%;
+	top: 36%;
+}
+
+.garden .point3 {
+	left: 50%;
+	top: 60%;
+}
+
+.garden .point4 {
+	left: 57%;
+	top: 85%;
+}
+
+.lockbody {
+	z-index: 10;
+	width: 50px;
+}
+
+.lockhead {
+	position: absolute;
+	left: 10px;
+	width: 30px;
+	transform-origin: 92%;
+}
+
+.library .point1 {
+	left: 44%;
+    top: 28%;
+}
+
+.library .point1 {
+	left: 44%;
+    top: 28%;
+}
+
+.library .point2 {
+    left: 6%;
+    top: 46%;
+}
+
+.library .point3 {
+    left: 29%;
+    top: 65%;
+}
+
+.library .point4 {
+    left: 57%;
+    top: 92%;
+}
+
+.restaurant .point1 {
+	left: 47%;
+	top: 49%;
+}
+
+.restaurant .point2 {
+	left: 65%;
+	top: 0%;
+}
+
+.restaurant .point3 {
+	left: 87%;
+	top: 64%;
+}
+
+.restaurant .point4 {
+	left: 17%;
+	top: 93%;
+}
+
+.playground .point1 {
+	left: 77%;
+	top: 49%;
+}
+
+.playground .point2 {
+	left: 93%;
+	top: 58%;
+}
+
+.playground .point3 {
+	left: 61%;
+	top: 68%;
+}
+
+.playground .point4 {
+	left: 40%;
+	top: 55%;
+}
+
+.street .point1 {
+	left: 93%;
+	top: 11%;
+}
+
+.street .point2 {
+	left: 43%;
+	top: 57%;
+}
+
+.street .point3 {
+	left: 10%;
+	top: 74%;
+}
+
+.street .point4 {
+	left: 60%;
+	top: 69%;
+}
+
+.question-container {
+	display: none;
+	position: fixed;
+    /*left: calc(50% - 150px);
+    top: calc(50% - 200px);
+    width: 300px;
+    height: 400px;*/
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #CCC;
+    border-radius: 10px;
+    z-index: 1000;
+    color: #EA5824;
+}
+
+.question {
+    width: 300px;
+    background: #222;
+    padding: 3%;
+    border-radius: 7px;
+    font-size: 18px;
+}
+
+.options-container {
+    font-size: 16px;
+    width: 310px;
+    margin: 5% auto 0 auto;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.options {
+	margin-top: 2px;
+	background: #222;
+    padding: 3%;
+}
+
+.hide {
+	display: none;
+}
+
+.prob-cont {
+    margin-left: 50%;
+    margin-top: 20%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #EA5824;
+    text-align: center;
+    color: #070513;
+}
+
+.prob {
+	font-size: 50px;
+}
+
+.proba {
+	font-size: 19px;
+	width: 100px;
+    margin: auto;
+}
+
+.comment-title {
+	color: #EA5824;
+    font-size: 22px;
+    margin-left: 12%;
+    margin-top: 10%;
+}
+
+.comment-cont {
+    position: relative;
+    width: 75%;
+    margin: 6% auto 0 auto;
+    padding: 3% 0;
+}
+
+.comment-border {
+	position: absolute;
+	border: 2px ;
+	width: 30%;
+	border: 2px solid #EA5824;
+}
+
+.comment-left-border {
+	left: 0;
+	top: 0;
+}
+
+.comment-right-border {
+	right: 0;
+	bottom: 0;
+}
+
+.comment {
+	color: #EA5824;
+	font-size: 18px;
+}
+
+.comment2 {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.comment3 {
+	text-align: right;
+}
+
+.save-button {
+	display: none;
+	position: absolute;
+    width: 180px;
+    height: 50px;
+    border: 2px solid #EA5824;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    color: #Ea5824;
+    font-size: 21px;
+    bottom: 16%;
+    left: calc(50% - 90px);
+}
+
+.tips {
+	z-index: 100;
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 75%;
+	transform: translateX(-50%);
+	color: #FFF;
+}
+
+.sign {
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	transform: translateX(-50%);
+	font-size: 14px;
+	color: #EA5824;
+}
+
+.qrcode {
+	position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 70px;
+    height: 70px;
+}
